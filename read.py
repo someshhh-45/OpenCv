@@ -6,10 +6,11 @@ while True:
     isTrue, frame = capture.read()
     if isTrue:
         cv.imshow('video', frame)
-        if cv.waitKey(20) & 0xFF == ord('d'):
+        if cv.waitKey(20) & 0xFF == ord('d'): press d to stop
             break
     else:
         break
 capture.release()
 cv.destroyAllWindows()
+
 
