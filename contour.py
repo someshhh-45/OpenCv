@@ -36,7 +36,7 @@ cv.imshow('Canny Edges',canny)
 RETR_TREE returns the hierarchy of like parent(outer contour) child(inner)
 RETR_EXTERNAL returns only external contours
 CHAIN_APPROX_NONE returns every poin(coordinate) in boundary similary 
-CHAIN_APPROX SIMPLE returns start  and end ***/
+CHAIN_APPROX_SIMPLE returns start  and end ***/
 
 contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
 print(f'{len(contours)} contours found!')
@@ -46,5 +46,6 @@ cv.imshow('Contours Drawn',blank)
 
 
 cv.waitKey(0)
+
 
 
