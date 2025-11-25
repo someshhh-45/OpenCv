@@ -31,6 +31,12 @@ cv.imshow('Canny Edges',canny)
 #ret, thresh = cv.threshold(gray, 125, 255, cv.THRESH_BINARY)
 #cv.imshow('Thresh', thresh)
 
+/*** RETR_LIST returns the numbers of contours 
+ we can also use
+RETR_TREE returns the hierarchy of like parent(outer contour) child(inner)
+RETR_EXTERNAL returns only external contours
+CHAIN_APPROX_NONE returns every poin(coordinate) in boundary similary 
+CHAIN_APPROX SIMPLE returns start  and end ***/
 
 contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
 print(f'{len(contours)} contours found!')
@@ -40,4 +46,5 @@ cv.imshow('Contours Drawn',blank)
 
 
 cv.waitKey(0)
+
 
